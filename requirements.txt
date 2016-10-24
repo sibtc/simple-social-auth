@@ -4,3 +4,4 @@ gunicorn==19.6.0
 python-decouple==3.0
 python-social-auth==0.2.21
 whitenoise==3.2.2
+psycopg2==2.6.2
