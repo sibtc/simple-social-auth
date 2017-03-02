@@ -11,6 +11,6 @@ urlpatterns = [
     url(r'^signup/$', core_views.signup, name='signup'),
     url(r'^settings/$', core_views.settings, name='settings'),
     url(r'^settings/password/$', core_views.password, name='password'),
-    url(r'^oauth/', include('social.apps.django_app.urls', namespace='social')),
+    url(r'^oauth/', include('social_django.urls', namespace='social')),
     url(r'^admin/', admin.site.urls),
 ]
