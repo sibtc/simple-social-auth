@@ -1,0 +1,18 @@
+db:
+  restart: always
+  image: postgres:10.3
+  ports:
+    - "5432:5432"
+  environment:
+    POSTGRES_USER: user
+    POSTGRES_PASSWORD: password
+    POSTGRES_DB: testdb
+web:
+  build: .
+  restart: always
+  links:
+    - db
+  ports:
+    - "8000:8000"
+  command: >
+    sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
