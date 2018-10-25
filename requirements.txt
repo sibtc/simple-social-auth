@@ -1,7 +1,7 @@
 dj-database-url==0.4.2
-Django==1.10.6
+Django==1.11.6
 gunicorn==19.6.0
-psycopg2==2.7
+psycopg2==2.7.5
 python-decouple==3.0
 social-auth-app-django==1.1.0
 whitenoise==3.3.0
